@@ -1,22 +1,31 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import MainLayout from '../layouts/MainLayout.vue'
+
+// Semua link di aplikasi memakai NAMA route (bukan path),
+// jadi kalau URL ingin diganti cukup ubah di file ini.
+//
+// Issue ini baru mengerjakan Layout + Navbar + Footer + Home (Team Identity).
+// Halaman lain sementara memakai ComingSoon; saat halaman aslinya jadi,
+// ganti `ComingSoon` dengan view-nya, mis.:
+//   component: () => import('../views/AboutTeam.vue')
+const ComingSoon = () => import('../views/ComingSoon.vue')
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(),
+  scrollBehavior: () => ({ top: 0 }),
   routes: [
+    { path: '/', redirect: '/home' },
     {
       path: '/',
-      name: 'home',
-      component: HomeView,
+      component: MainLayout,
+      children: [
+        { path: 'home', name: 'home', component: () => import('../views/Home.vue') },
+        { path: 'about', name: 'about', component: ComingSoon, meta: { title: 'About Team' } },
+        { path: 'project', name: 'projects', component: ComingSoon, meta: { title: 'Projects Showcase' } },
+        { path: 'contact', name: 'contact', component: ComingSoon, meta: { title: 'Contact' } },
+      ],
     },
-    {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue'),
-    },
+    { path: '/:pathMatch(.*)*', redirect: '/home' },
   ],
 })
 

@@ -1,35 +1,18 @@
-@import './base.css';
+/* ============================================================
+   MAIN — pintu masuk CSS. Hanya berisi daftar import.
+   Dipanggil sekali di src/main.js:  import './assets/main.css'
+   Urutan import = urutan cascade, jangan dibalik.
+   ============================================================ */
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
-}
+/* Font (harus paling atas) */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
-}
+@import './base.css';           /* 1. warna (token) + reset */
+@import './layout.css';         /* 2. navbar, footer, container, judul */
+@import './components.css';     /* 3. button (dan komponen reusable lain nanti) */
+@import './home.css';           /* 4. halaman Home */
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
-}
+/* Aktifkan saat file-nya sudah diisi (di-import saat issue halamannya dikerjakan):
+@import './project-detail.css';
+@import './contact.css';
+*/
