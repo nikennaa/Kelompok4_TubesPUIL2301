@@ -28,9 +28,9 @@
 | ID | Kebutuhan | Kriteria penerimaan |
 | --- | --- | --- |
 | FR-01 | Pengunjung dapat melihat landing page utama | Identitas tim, ringkasan, nilai/fokus tim, dan highlight proyek pilihan tampil; tombol menuju Showcase dan About Team dapat dibuka. |
-| FR-02 | Pengunjung dapat mencari dan memfilter proyek berdasarkan anggota | Hasil daftar proyek berubah sesuai kata kunci atau anggota yang dipilih; muncul empty state jika tidak ada hasil. |
+| FR-02 | Pengunjung dapat melihat halaman Project Showcase | Kartu proyek menampilkan judul, ringkasan, kategori, dan teknologi; minimal 3 proyek anggota tampil. |
 | FR-03 | Pengunjung dapat melihat halaman About Team | Foto/avatar, nama, peran, keahlian, dan informasi singkat seluruh anggota tampil dengan data dari GitHub REST API. |
-| FR-04 | Pengunjung dapat melihat halaman Project Showcase | Kartu proyek menampilkan judul, ringkasan, kategori, dan teknologi; minimal 3 proyek anggota tampil. |
+| FR-04 | Pengunjung dapat mencari dan memfilter proyek berdasarkan kategori proyek dan kontributor anggota | Hasil daftar proyek berubah sesuai kata kunci atau anggota yang dipilih; muncul empty state jika tidak ada hasil. |
 | FR-05 | Pengunjung dapat melihat Project Detail | Latar belakang, tujuan, fitur, teknologi, dokumentasi visual, dan kontribusi anggota tersedia; detail terbuka dari kartu proyek. |
 | FR-06 | Pengunjung dapat menghubungi setiap anggota melalui Contact | Tautan GitHub, Email, dan LinkedIn setiap anggota dapat dibuka dan menuju tujuan yang benar. |
 
