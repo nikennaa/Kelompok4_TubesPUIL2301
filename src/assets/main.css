@@ -1,18 +1,18 @@
+
 /* ============================================================
    MAIN — pintu masuk CSS. Hanya berisi daftar import.
-   Dipanggil sekali di src/main.js:  import './assets/main.css'
+   Dipanggil sekali di src/main.js: import './assets/main.css'
    Urutan import = urutan cascade, jangan dibalik.
    ============================================================ */
 
 /* Font (harus paling atas) */
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
 
-@import './base.css';           /* 1. warna (token) + reset */
-@import './layout.css';         /* 2. navbar, footer, container, judul */
-@import './components.css';     /* 3. button (dan komponen reusable lain nanti) */
-@import './home.css';           /* 4. halaman Home */
+@import './base.css';       /* 1. warna (token) + reset */
+@import './layout.css';     /* 2. navbar, footer, container, judul */
+@import './components.css'; /* 3. button dan komponen reusable */
+@import './home.css';       /* 4. halaman Home */
+@import './contact.css';    /* 5. halaman Contact */
 
-/* Aktifkan saat file-nya sudah diisi (di-import saat issue halamannya dikerjakan):
-@import './project-detail.css';
-@import './contact.css';
-*/
+/* Aktifkan saat file-nya sudah diisi */
+/* @import './project-detail.css'; */
