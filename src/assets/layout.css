@@ -135,7 +135,8 @@
   height: 82px;
   align-items: center;
   justify-content: space-between;
-  padding-inline: max(24px, calc((100% - 1240px) / 2));
+  /* lebar isi sama dengan .container & footer (1160px) supaya logo sejajar dengan konten */
+  padding-inline: max(24px, calc((100% - 1160px) / 2));
   border-bottom: 1px solid var(--pink-line);
   background: var(--white);
 }
@@ -148,17 +149,6 @@
   font-family: Manrope, sans-serif;
   font-weight: 800;
   letter-spacing: 0.08em;
-}
-
-.brand-mark {
-  display: grid;
-  width: 36px;
-  height: 36px;
-  place-items: center;
-  border-radius: 11px;
-  background: var(--pink);
-  color: var(--white);
-  font-size: 13px;
 }
 
 .nav-links {
@@ -206,21 +196,68 @@
 
 /* ---------- Footer ---------- */
 .footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 25px;
-  padding: 35px max(24px, calc((100% - 1160px) / 2));
+  padding: 48px max(24px, calc((100% - 1160px) / 2)) 24px;
   background: var(--ink);
   color: var(--white);
 }
 
-.footer .brand {
-  color: var(--white);
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1.3fr 0.8fr;
+  gap: 48px;
 }
 
-.footer p {
-  margin: 8px 0 0;
+.footer .brand {
+  color: var(--white);
+  font-size: 28px;
+  letter-spacing: 0.04em;
+}
+
+.footer-tagline {
+  margin: 14px 0 0;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.footer-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 16px;
+  color: var(--white);
+  font: 700 20px Manrope, sans-serif;
+}
+
+.footer-col p {
+  margin: 0 0 8px;
+  color: var(--white);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-col .footer-campus {
+  margin-top: 14px;
+  font-weight: 700;
+}
+
+.footer-link {
+  display: block;
+  width: fit-content;
+  margin-bottom: 12px;
+  color: var(--white);
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+  opacity: 1;
+}
+
+.footer-copy {
+  margin: 36px 0 0;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
   color: var(--white);
   font-size: 12px;
 }
@@ -298,8 +335,14 @@
     bottom: -4px;
   }
 
-  .footer {
-    align-items: flex-start;
-    flex-direction: column;
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 900px) and (min-width: 701px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
   }
 }

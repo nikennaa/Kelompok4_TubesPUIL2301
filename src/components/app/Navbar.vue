@@ -1,17 +1,10 @@
 <script setup>
 import { ref } from 'vue'
 import { RouterLink, useRoute } from 'vue-router'
+import { navLinks as links } from '../../data/navigation'
 
 const menuOpen = ref(false)
 const route = useRoute()
-
-// `match` = nama route yang membuat menu ini berstatus aktif
-const links = [
-  { label: 'Home', to: { name: 'home' }, match: ['home'] },
-  { label: 'About Team', to: { name: 'about' }, match: ['about'] },
-  { label: 'Projects Showcase', to: { name: 'projects' }, match: ['projects', 'project-detail'] },
-  { label: 'Contact', to: { name: 'contact' }, match: ['contact'] },
-]
 
 const isActive = (link) => link.match.includes(route.name)
 </script>
@@ -19,8 +12,7 @@ const isActive = (link) => link.match.includes(route.name)
 <template>
   <header class="navbar">
     <RouterLink :to="{ name: 'home' }" class="brand" @click="menuOpen = false">
-      <span class="brand-mark">K4</span>
-      <span>GROUP.04</span>
+      GROUP04
     </RouterLink>
 
     <button
