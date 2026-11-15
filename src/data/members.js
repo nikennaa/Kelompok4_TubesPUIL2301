@@ -1,10 +1,8 @@
-// Data anggota Kelompok 4 yang TIDAK tersedia di GitHub API:
-// peran, keahlian, bio cadangan, LinkedIn, email.
-// Avatar, bio GitHub, dan jumlah repo diambil dari GitHub REST API (lihat services/githubApi.js
-// dan stores/members.js). Jika API gagal / username kosong, kartu memakai data di file ini.
-//
-// githubUsername: isi dengan username GitHub anggota (contoh: 'octocat').
-//                 Kosongkan ('') bila belum ada -> kartu tampil dari data lokal.
+
+// Data anggota Kelompok 4
+// Peran, keahlian, bio, LinkedIn, dan email berasal dari data lokal.
+// Avatar dan informasi GitHub diambil dari GitHub REST API.
+
 export const members = [
   {
     id: 1,
@@ -13,9 +11,9 @@ export const members = [
     role: 'Team Member',
     skills: ['UI/UX Design', 'Frontend'],
     bio: 'Tambahkan deskripsi singkat anggota di sini.',
-    github: '#',
+    github: 'a',
     email: 'refa@example.com',
-    linkedin: '#',
+    linkedin: 'a',
   },
   {
     id: 2,
@@ -24,9 +22,9 @@ export const members = [
     role: 'Team Member',
     skills: ['System Analyst', 'Project Management'],
     bio: 'Tambahkan deskripsi singkat anggota di sini.',
-    github: '#',
+    github: 'a',
     email: 'niken@example.com',
-    linkedin: '#',
+    linkedin: 'a',
   },
   {
     id: 3,
@@ -41,14 +39,14 @@ export const members = [
   },
   {
     id: 4,
-    name: 'NADYA',
+    name: 'Nadya Maulida',
     githubUsername: 'nadyamauliida',
     role: 'Team Member',
     skills: ['Frontend', 'Testing'],
-    bio: 'Tambahkan deskripsi singkat anggota di sini.',
-    github: '#',
-    email: 'nadya@example.com',
-    linkedin: '#',
+    bio: 'Saya Nadya Maulida Rahmadien, mahasiswa semester 7 Program Studi S1 Sistem Informasi di Telkom University Kampus Jakarta. Saya memiliki ketertarikan dalam pengembangan aplikasi berbasis web, khususnya Frontend Development dan Software Testing.',
+    github: 'https://github.com/nadyamauliida',
+    email: 'nadyamauliida19@gmail.com',
+    linkedin: 'https://www.linkedin.com/in/nadya-maulida-rahmadien-8055172b9/',
   },
   {
     id: 5,
@@ -68,8 +66,8 @@ export const members = [
     role: 'Team Member',
     skills: ['Project Management', 'Analysis'],
     bio: 'Tambahkan deskripsi singkat anggota di sini.',
-    github: '#',
+    github: 'a',
     email: 'diva@example.com',
-    linkedin: '#',
+    linkedin: 'a',
   },
 ]
